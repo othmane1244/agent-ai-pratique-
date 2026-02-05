@@ -160,6 +160,50 @@ AgentWithUI/
 
 ---
 
+## ☁️ Using Qdrant Cloud
+
+### Why Qdrant Cloud?
+- No Docker needed – Hosted solution, instant setup
+- Free tier – Up to 1 GB storage & 5 million vectors
+- Scalable – Automatic scaling for production workloads
+- High availability – Automatic backups and redundancy
+- API-based – Works anywhere (local, cloud, mobile)
+
+### Setup Qdrant Cloud (5 Minutes)
+
+#### 1️⃣ Create Account
+1. Go to cloud.qdrant.io
+2. Sign up with Google, GitHub, or email
+3. Verify email
+
+#### 2️⃣ Create Cluster
+1. Click "Create Cluster"
+2. Select "Free" tier
+3. Choose nearest region
+4. Enter cluster name (e.g., `my-rag-agent`)
+5. Click "Create" → wait 1-2 minutes
+
+#### 3️⃣ Get Credentials
+1. Click your cluster name
+2. Copy API URL (format: `https://xxxxx-us-east-1-0.aws.cloud.qdrant.io:6333`)
+3. Go to API Keys → Generate → Copy key
+
+#### 4️⃣ Update `.env`
+```env
+QDRANT_URL=https://xxxxx-us-east-1-0.aws.cloud.qdrant.io:6333
+QDRANT_API_KEY=your_qdrant_cloud_api_key
+
+#### 5️⃣ Update memory.py
+client = QdrantClient(
+    url=os.getenv("QDRANT_URL"),
+    api_key=os.getenv("QDRANT_API_KEY")
+)
+
+#### 6️⃣ Test
+streamlit run app.py
+
+---
+
 ## 🎮 Usage
 
 1. **Start the app** → `streamlit run app.py`
