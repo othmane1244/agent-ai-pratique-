@@ -3,7 +3,6 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-interactive-red.svg)
 ![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 **A lightweight Retrieval-Augmented Generation (RAG) agent with Streamlit UI for conversational AI, built for ENSABM training.**
 
@@ -196,57 +195,6 @@ AgentWithUI/
 - [Qdrant Documentation](https://qdrant.tech/documentation/)
 - [OpenRouter API Docs](https://openrouter.ai/docs)
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit changes (`git commit -m "Add your feature"`)
-4. Push to branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** – see [LICENSE](LICENSE) file for details.
-
----
-
-## 💡 Tips & Best Practices
-
-- **Cost Optimization** – Use free tiers initially; monitor API usage
-- **Local Development** – Run Qdrant locally with Docker for faster iteration
-- **Security** – Never commit `.env` files; use `.env.example` for templates
-- **Extensibility** – Add new tools in `tools.py` following the existing pattern
-- **Performance** – Cache embeddings and search results to reduce API calls
-
----
-
-## ❓ FAQ
-
-**Q: Can I use this for production?**  
-A: Yes! Follow security best practices (API key rotation, rate limiting, error handling).
-
-**Q: How do I add a new tool?**  
-A: Add a function in `tools.py` and register it in the agent's tool registry.
-
-**Q: What if I don't have GPU?**  
-A: No GPU needed – embeddings are handled by OpenAI API.
-
-**Q: Can I use a different LLM?**  
-A: Yes – OpenRouter supports 100+ models; update `llm.py` for other providers.
-
----
-
-## 📞 Support
-
-- **Issues** – Open an issue on [GitHub](https://github.com/Ayoub-teaching-repos/Formation_ai_agent-)
-- **Discussions** – Use GitHub Discussions for questions
-- **Email** – Contact course instructors for training questions
 
 ---
 
